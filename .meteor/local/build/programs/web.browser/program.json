@@ -233,17 +233,6 @@
       "hash": "c3059a78bb200b171099fc4fa1a9345101790ddb"
     },
     {
-      "path": "packages/webapp.js",
-      "where": "client",
-      "type": "js",
-      "cacheable": true,
-      "url": "/packages/webapp.js?e1be090051b82f046484dccc2de7d747e50c7328",
-      "sourceMap": "packages/webapp.js.map",
-      "sourceMapUrl": "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map",
-      "size": 3106,
-      "hash": "e1be090051b82f046484dccc2de7d747e50c7328"
-    },
-    {
       "path": "packages/deps.js",
       "where": "client",
       "type": "js",
@@ -253,39 +242,6 @@
       "sourceMapUrl": "/packages/504589e1e9585dec8f9f6094e5a87b22de3783a1.map",
       "size": 1442,
       "hash": "504589e1e9585dec8f9f6094e5a87b22de3783a1"
-    },
-    {
-      "path": "packages/reactive-dict.js",
-      "where": "client",
-      "type": "js",
-      "cacheable": true,
-      "url": "/packages/reactive-dict.js?1cb61826ceb23464171f17c2191c7e04a9b91508",
-      "sourceMap": "packages/reactive-dict.js.map",
-      "sourceMapUrl": "/packages/1cb61826ceb23464171f17c2191c7e04a9b91508.map",
-      "size": 21702,
-      "hash": "1cb61826ceb23464171f17c2191c7e04a9b91508"
-    },
-    {
-      "path": "packages/session.js",
-      "where": "client",
-      "type": "js",
-      "cacheable": true,
-      "url": "/packages/session.js?daf192a7244079d45db32a6fc26ebc3881fc1aa3",
-      "sourceMap": "packages/session.js.map",
-      "sourceMapUrl": "/packages/daf192a7244079d45db32a6fc26ebc3881fc1aa3.map",
-      "size": 6491,
-      "hash": "daf192a7244079d45db32a6fc26ebc3881fc1aa3"
-    },
-    {
-      "path": "packages/livedata.js",
-      "where": "client",
-      "type": "js",
-      "cacheable": true,
-      "url": "/packages/livedata.js?718526445deb4d9baacb6d92c551adea1d36c1e1",
-      "sourceMap": "packages/livedata.js.map",
-      "sourceMapUrl": "/packages/718526445deb4d9baacb6d92c551adea1d36c1e1.map",
-      "size": 1413,
-      "hash": "718526445deb4d9baacb6d92c551adea1d36c1e1"
     },
     {
       "path": "packages/jquery.js",
@@ -365,6 +321,138 @@
       "hash": "376767bb0d2463b3b2615a1b90e77f6b22d39d7b"
     },
     {
+      "path": "packages/iron_core.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_core.js?d966a1f70c94792fd94c8a155bdbef9bec5e0047",
+      "sourceMap": "packages/iron_core.js.map",
+      "sourceMapUrl": "/packages/d966a1f70c94792fd94c8a155bdbef9bec5e0047.map",
+      "size": 32915,
+      "hash": "d966a1f70c94792fd94c8a155bdbef9bec5e0047"
+    },
+    {
+      "path": "packages/iron_dynamic-template.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_dynamic-template.js?ccf1d8e4c1e95e99af04ba0ac922dbd8099fb0bd",
+      "sourceMap": "packages/iron_dynamic-template.js.map",
+      "sourceMapUrl": "/packages/ccf1d8e4c1e95e99af04ba0ac922dbd8099fb0bd.map",
+      "size": 86389,
+      "hash": "ccf1d8e4c1e95e99af04ba0ac922dbd8099fb0bd"
+    },
+    {
+      "path": "packages/iron_layout.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_layout.js?4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062",
+      "sourceMap": "packages/iron_layout.js.map",
+      "sourceMapUrl": "/packages/4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062.map",
+      "size": 62058,
+      "hash": "4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062"
+    },
+    {
+      "path": "packages/iron_url.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_url.js?f73de31c2603555662bc2fa86029a2e04c9ea051",
+      "sourceMap": "packages/iron_url.js.map",
+      "sourceMapUrl": "/packages/f73de31c2603555662bc2fa86029a2e04c9ea051.map",
+      "size": 69417,
+      "hash": "f73de31c2603555662bc2fa86029a2e04c9ea051"
+    },
+    {
+      "path": "packages/iron_middleware-stack.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_middleware-stack.js?56e0c02a758f48c0a704ca978a8fb6d7bd9ebbab",
+      "sourceMap": "packages/iron_middleware-stack.js.map",
+      "sourceMapUrl": "/packages/56e0c02a758f48c0a704ca978a8fb6d7bd9ebbab.map",
+      "size": 47239,
+      "hash": "56e0c02a758f48c0a704ca978a8fb6d7bd9ebbab"
+    },
+    {
+      "path": "packages/iron_location.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_location.js?ca4f0f6672edbfb6cafab6e5c024208d9364eac9",
+      "sourceMap": "packages/iron_location.js.map",
+      "sourceMapUrl": "/packages/ca4f0f6672edbfb6cafab6e5c024208d9364eac9.map",
+      "size": 52275,
+      "hash": "ca4f0f6672edbfb6cafab6e5c024208d9364eac9"
+    },
+    {
+      "path": "packages/reactive-dict.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/reactive-dict.js?1cb61826ceb23464171f17c2191c7e04a9b91508",
+      "sourceMap": "packages/reactive-dict.js.map",
+      "sourceMapUrl": "/packages/1cb61826ceb23464171f17c2191c7e04a9b91508.map",
+      "size": 21702,
+      "hash": "1cb61826ceb23464171f17c2191c7e04a9b91508"
+    },
+    {
+      "path": "packages/iron_controller.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_controller.js?5a7eedaafda7001b9d5cb52322a419bbb758968c",
+      "sourceMap": "packages/iron_controller.js.map",
+      "sourceMapUrl": "/packages/5a7eedaafda7001b9d5cb52322a419bbb758968c.map",
+      "size": 41091,
+      "hash": "5a7eedaafda7001b9d5cb52322a419bbb758968c"
+    },
+    {
+      "path": "packages/iron_router.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/iron_router.js?7b16fe70bccff9182aca02afb2ccd7708ac57c64",
+      "sourceMap": "packages/iron_router.js.map",
+      "sourceMapUrl": "/packages/7b16fe70bccff9182aca02afb2ccd7708ac57c64.map",
+      "size": 210846,
+      "hash": "7b16fe70bccff9182aca02afb2ccd7708ac57c64"
+    },
+    {
+      "path": "packages/webapp.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/webapp.js?e1be090051b82f046484dccc2de7d747e50c7328",
+      "sourceMap": "packages/webapp.js.map",
+      "sourceMapUrl": "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map",
+      "size": 3106,
+      "hash": "e1be090051b82f046484dccc2de7d747e50c7328"
+    },
+    {
+      "path": "packages/session.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/session.js?daf192a7244079d45db32a6fc26ebc3881fc1aa3",
+      "sourceMap": "packages/session.js.map",
+      "sourceMapUrl": "/packages/daf192a7244079d45db32a6fc26ebc3881fc1aa3.map",
+      "size": 6491,
+      "hash": "daf192a7244079d45db32a6fc26ebc3881fc1aa3"
+    },
+    {
+      "path": "packages/livedata.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/packages/livedata.js?718526445deb4d9baacb6d92c551adea1d36c1e1",
+      "sourceMap": "packages/livedata.js.map",
+      "sourceMapUrl": "/packages/718526445deb4d9baacb6d92c551adea1d36c1e1.map",
+      "size": 1413,
+      "hash": "718526445deb4d9baacb6d92c551adea1d36c1e1"
+    },
+    {
       "path": "packages/spacebars.js",
       "where": "client",
       "type": "js",
@@ -391,44 +479,51 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/packages/global-imports.js?ddfcd9be6cef3c8bb0263139937a05092e4a3fe9",
-      "size": 718,
-      "hash": "ddfcd9be6cef3c8bb0263139937a05092e4a3fe9"
+      "url": "/packages/global-imports.js?6fc397afa1f9e2f2f58bcff05db23cef9e32db68",
+      "size": 850,
+      "hash": "6fc397afa1f9e2f2f58bcff05db23cef9e32db68"
     },
     {
-      "path": "app/template.customs.js",
+      "path": "app/template.nuolingo.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/template.customs.js?3b951139d64a314a41cbbbc5e7e681d6316b55b7",
-      "size": 780,
-      "hash": "3b951139d64a314a41cbbbc5e7e681d6316b55b7"
+      "url": "/template.nuolingo.js?a175c68a146857af88d2c3901814bb707741ed74",
+      "size": 1613,
+      "hash": "a175c68a146857af88d2c3901814bb707741ed74"
     },
     {
-      "path": "app/customs.js",
+      "path": "app/nuolingo.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/customs.js?5c92f82d8ba1c6175fdc339e83be706b294e0af1",
-      "size": 814,
-      "hash": "5c92f82d8ba1c6175fdc339e83be706b294e0af1"
+      "url": "/nuolingo.js?004ca588591a78c1f29685ab06e8781d9be5d08e",
+      "size": 330,
+      "hash": "004ca588591a78c1f29685ab06e8781d9be5d08e"
     },
     {
-      "path": "20ae2c8d51b2507244e598844414ecdec2615ce3.css",
+      "path": "app/routes.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/routes.js?20f459ae99e70a257b53c38a0a7b0d0ac75a0cab",
+      "size": 95,
+      "hash": "20f459ae99e70a257b53c38a0a7b0d0ac75a0cab"
+    },
+    {
+      "path": "app/nuolingo.css",
       "where": "client",
       "type": "css",
       "cacheable": true,
-      "url": "/20ae2c8d51b2507244e598844414ecdec2615ce3.css",
-      "sourceMap": "20ae2c8d51b2507244e598844414ecdec2615ce3.css.map",
-      "sourceMapUrl": "/20ae2c8d51b2507244e598844414ecdec2615ce3.map",
-      "size": 30,
-      "hash": "20ae2c8d51b2507244e598844414ecdec2615ce3"
+      "url": "/nuolingo.css?da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "size": 0,
+      "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
     },
     {
       "path": "head.html",
       "where": "internal",
       "type": "head",
-      "hash": "b3d4d821005c7a7b7aab6b52f9500e039951a824"
+      "hash": "b3dd90393a8b71b4a265f08c3e6fbf6031148059"
     }
   ]
 }
