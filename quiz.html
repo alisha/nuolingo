@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>NuoLingo Quiz</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="quizAssets/css/style.css">
+
+</head>
+<body>
+    
+    <div id="navigation">   
+      <nav>
+        <ul>    
+            <li>
+                <a href="back.html" id="back"><i class="fa fa-arrow-left"></i></a>
+            </li>  
+            <li>
+                <a href="dashboard.html" id="dashboard"><i class="fa fa-home"></i></a>
+        </ul>
+      </nav>
+    </div>
+    <div id="frame" role="content"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        var quiztitle = "Quiz: Japanese Table Manners";
+        var quiz = [
+            {
+                "image": "quizAssets/img/cloth.jpg",
+                "question": "Q1: What should you do when given a wet towel at a restaurant? ",
+                "choices": [
+                    "Use it to clean your hands and face.",
+                    "Wash only your hands.",
+                    "Place it on your lap as you would with a napkin."
+                ],
+                "correct": "Wash only your hands.",
+                "explanation": "Do not use it as a napkin, or to touch a part of your face. When finished, carefully fold and set it aside on the table. "
+            },
+            {
+                "question": "Q2: How much should you tip in Japan?",
+                "image": "quizAssets/img/tipping.jpg",
+                "choices": [
+                    "Always tip 15%.",
+                    "Tip only if you felt like the service was good.",
+                    "Never tip in Japan."
+                ],
+                "correct": "Never tip in Japan.",
+                "explanation": "Tipping is considered to be insulting!"
+            },
+            {
+                "question": "Q3: What is proper etiquette for eating noodles?",
+                "image": "quizAssets/img/noodles.jpg",
+                "choices": [
+                    "Eat slowly and refrain from making slurping noises.",
+                    "Slurping loudly is OK to do and actually preferred.",
+                    "Twirl your noodles with your fork before eating."
+                ],
+                "correct": "Slurping loudly is OK to do and actually preferred.",
+                "explanation": "Slurping signifies to the chef that you are enjoying your meal."
+            },
+            {
+                "question": "Q4: What should you say before eating?",
+                "image": "quizAssets/img/meals.jpg",
+                "choices": [
+                    "Kampai",
+                    "Itadakimasu",
+                    "Oishii"
+                ],
+                "correct": "Itadakimasu",
+                "explanation": "You should always say 'itadakimasu' before eating, even if it's just a sample from a supermarket."
+            }
+        ]
+
+
+        /******* No need to edit below this line *********/
+        var currentquestion = 0, score = 0, submt=true, picked;
+
+        jQuery(document).ready(function($){
+
+            /**
+             * HTML Encoding function for alt tags and attributes to prevent messy
+             * data appearing inside tag attributes.
+             */
+            function htmlEncode(value){
+              return $(document.createElement('div')).text(value).html();
+            }
+
+            /**
+             * This will add the individual choices for each question to the ul#choice-block
+             *
+             * @param {choices} array The choices from each question
+             */
+            function addChoices(choices){
+                if(typeof choices !== "undefined" && $.type(choices) == "array"){
+                    $('#choice-block').empty();
+                    for(var i=0;i<choices.length; i++){
+                        $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');                    
+                    }
+                }
+            }
+            
+            /**
+             * Resets all of the fields to prepare for next question
+             */
+            function nextQuestion(){
+                submt = true;
+                $('#explanation').empty();
+                $('#question').text(quiz[currentquestion]['question']);
+                $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+                if(quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != ""){
+                    if($('#question-image').length == 0){
+                        $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+                    } else {
+                        $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+                    }
+                } else {
+                    $('#question-image').remove();
+                }
+                addChoices(quiz[currentquestion]['choices']);
+                setupButtons();
+            }
+
+            /**
+             * After a selection is submitted, checks if its the right answer
+             *
+             * @param {choice} number The li zero-based index of the choice picked
+             */
+            function processQuestion(choice){
+                if(quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']){
+                    $('.choice').eq(choice).css({'background-color':'#50D943'});
+                    $('#explanation').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                    score++;
+                } else {
+                    $('.choice').eq(choice).css({'background-color':'#D92623'});
+                    $('#explanation').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['explanation']));
+                }
+                currentquestion++;
+                $('#submitbutton').html('NEXT QUESTION &raquo;').on('click', function(){
+                    if(currentquestion == quiz.length){
+                        endQuiz();
+                    } else {
+                        $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                        nextQuestion();
+                    }
+                })
+            }
+
+            /**
+             * Sets up the event listeners for each button.
+             */
+            function setupButtons(){
+                $('.choice').on('mouseover', function(){
+                    $(this).css({'background-color':'#e1e1e1'});
+                });
+                $('.choice').on('mouseout', function(){
+                    $(this).css({'background-color':'#fff'});
+                })
+                $('.choice').on('click', function(){
+                    picked = $(this).attr('data-index');
+                    $('.choice').removeAttr('style').off('mouseout mouseover');
+                    $(this).css({'border-color':'#222','font-weight':700,'background-color':'#c1c1c1'});
+                    if(submt){
+                        submt=false;
+                        $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                            $('.choice').off('click');
+                            $(this).off('click');
+                            processQuestion(picked);
+                        });
+                    }
+                })
+            }
+            
+            /**
+             * Quiz ends, display a message.
+             */
+            function endQuiz(){
+                $('#explanation').empty();
+                $('#question').empty();
+                $('#choice-block').empty();
+                $('#submitbutton').remove();
+                $('#question').text("You got " + score + " out of " + quiz.length + " questions correct!");
+                $(document.createElement('h2')).css({'text-align':'center', 'font-size':'4em'}).text(Math.round(score/quiz.length * 100) + '%').insertAfter('#question');
+            }
+
+            /**
+             * Runs the first time and creates all of the elements for the quiz
+             */
+            function init(){
+                //add title
+                if(typeof quiztitle !== "undefined" && $.type(quiztitle) === "string"){
+                    $(document.createElement('h1')).text(quiztitle).appendTo('#frame');
+                } else {
+                    $(document.createElement('h1')).text("Quiz").appendTo('#frame');
+                }
+
+                //add pager and questions
+                if(typeof quiz !== "undefined" && $.type(quiz) === "array"){
+                    //add pager
+                    $(document.createElement('p')).addClass('pager').attr('id','pager').text('Question 1 of ' + quiz.length).appendTo('#frame');
+                    //add image if present
+                    if(quiz[0].hasOwnProperty('image') && quiz[0]['image'] != ""){
+                        $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#frame');
+                    }
+                    //add first question
+                    $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#frame');
+                    
+                  
+                
+                    //questions holder
+                    $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#frame');
+                
+                    //add choices
+                    addChoices(quiz[0]['choices']);
+
+                
+                    //add submit button
+                    $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Answer').css({'font-weight':700,'color':'#fff'}).appendTo('#frame');
+                
+                      $(document.createElement('p')).addClass('explanation').attr('id','explanation').html('&nbsp;').appendTo('#frame');
+                    setupButtons();
+                }
+            }
+            init();
+        });
+    </script>
+</body>
+
+</html>
