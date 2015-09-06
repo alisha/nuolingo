@@ -17,7 +17,6 @@ PROGRAMMING
 ***********************/
 #programming {
     clear:both;
-    background-color: #5eb9e2;
     overflow:auto;
     padding-bottom:100px;
 
@@ -114,7 +113,6 @@ DESIGN
 
 #design {
     clear:both;
-    background-color: #6caa8a;
     overflow:auto;
     padding-bottom:100px;
 
@@ -211,7 +209,6 @@ RESUME
 ***********************/
 #resume {
     clear:both;
-    background-color: #3b8686;
     overflow:auto;
     }
 
@@ -222,7 +219,6 @@ RESUME
 #resume a {
   margin-top: 60px;
   margin-bottom: 65px;
-  background-color: #235050;
   border-radius: 18px;
   display: block;
   text-align: center;
@@ -250,7 +246,6 @@ ARTWORK
 ***********************/
 #artwork {
     clear:both;
-    background-color: #6caa8a;
     overflow:auto;
     }
 
@@ -370,7 +365,6 @@ nav {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: #5eb9e2;
 }
 
 nav li {
