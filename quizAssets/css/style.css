@@ -43,3 +43,30 @@ p.explanation{
     top: 13px;
     right: 13px;
 }
+
+#back:hover:after {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 20px;
+  content: attr(data-title);
+  padding: 2px 5px;
+  background-color: #fff;
+  color: #28aadc;
+  font-size: 10px;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+#dashboard:hover:after {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 20px;
+  content: attr(data-title);
+  padding: 2px 5px;
+  background-color: #fff;
+  color: #28aadc;
+  font-size: 10px;
+  white-space: nowrap;
+  border-radius: 3px;
+  }
