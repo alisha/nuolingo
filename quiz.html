@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    
+    <body style="background-image: url('panelsAssets/japan1.jpg');">
     <div id="navigation">   
       <nav>
         <ul>    
@@ -141,7 +141,7 @@
                     if(currentquestion == quiz.length){
                         endQuiz();
                     } else {
-                        $(this).text('Check Answer').css({'color':'#222'}).off('click');
+                        $(this).text('Check Answer').css({'color':'#fff'}).off('click');
                         nextQuestion();
                     }
                 })
@@ -163,7 +163,7 @@
                     $(this).css({'border-color':'#222','font-weight':700,'background-color':'#c1c1c1'});
                     if(submt){
                         submt=false;
-                        $('#submitbutton').css({'color':'#000'}).on('click', function(){
+                        $('#submitbutton').css({'color':'#fff'}).on('click', function(){
                             $('.choice').off('click');
                             $(this).off('click');
                             processQuestion(picked);
