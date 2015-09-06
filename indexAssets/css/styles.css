@@ -307,6 +307,7 @@ pre code {
   max-width: 800px;
   background: #fff;
   padding: 30px;
+  padding-top:10px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
