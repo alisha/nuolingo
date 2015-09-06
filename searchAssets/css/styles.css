@@ -1,0 +1,51 @@
+html,body {
+  height:100%;
+
+}
+
+body {
+    background-image: url('giphy.gif');
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+    line-height: 2px;
+}
+
+h1 {
+  font: 'Montserrat', sans-serif;
+  font-size:60px;
+  color:#fff;
+  padding-top:35px;
+}
+
+.lead {
+	color:#fff;
+  line-height:0.8;
+}
+
+
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+
+  color:#eee;
+  overflow:hidden;
+}
+
+.container-full a {
+  color:#efefef;
+  text-decoration:none;
+}
+
+.v-center {
+  margin-top:15%;
+}
+
+#form-control input-lg{
+  color:black;
+}
+  

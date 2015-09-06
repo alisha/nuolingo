@@ -164,7 +164,7 @@ main {
 .nav__primary--link:hover:after {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 0px;
   z-index: 20px;
   content: attr(data-title);
   padding: 2px 5px;

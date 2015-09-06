@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NuoLingo Dashboard</title>
+    <!-- Bootstrap Styles-->
+    <link href="postboardAssets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="postboardAssets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="postboardAssets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="postboardAssets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="indexAssets/images/favicon.ico">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">NuoLingo</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>NuoLingo Advisor</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Today</em>
+                                    </span>
+                                </div>
+                                <div>We recommended that you review the Japanese Table Manners set for a few minutes today!</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>Janie Bendari</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Hey! I found this awesome set about Japanese Business Culture. Definitely check it out before the trip.</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>Wesley Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>5 days ago</em>
+                                    </span>
+                                </div>
+                                <div>Did you find any good sets for French drinking etiquette?</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Japanese Table Manners</strong>
+                                       
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>French Drinking Etiquette</strong>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                                            <span class="sr-only">28% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Japanese Business Culture</strong>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>American Common Greetings</strong>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                            <span class="sr-only">85% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+               
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+
+                    <li>
+                        <a class="active-menu" href="postboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>                
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Countries<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="#">France<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Review Sets</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">Quizzes</a>
+                                        </li>
+                                        
+                                    </ul>
+                            </li>
+                            <li>
+                                <a href="#">Japan<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="review.html">Review Sets</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="quiz.html">Quizzes</a>
+                                        </li>
+                                        
+                                    </ul>
+                            </li>
+                            <li>
+                                <a href="search.html">+ Add New Country</a>
+                            </li>
+                            
+                        </ul>
+
+                        <li>
+                        <a href="form.html"><i class="fa fa-edit"></i> Submit Request </a>
+                        </li>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                 
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dashboard <small>Your Progress</small>
+                        </h1>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green">
+                            <div class="panel-body">
+                                <i class="fa fa-check-square-o fa-5x"></i>
+                                <h3>24/50</h3>
+                            </div>
+                            <div class="panel-footer back-footer-green">
+                                Completed Sets
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                            <div class="panel-body">
+                                <i class="fa fa fa-book fa-5x"></i>
+                                <h3>89%</h3>
+                            </div>
+                            <div class="panel-footer back-footer-blue">
+                               Average Score
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-red">
+                            <div class="panel-body">
+                                <i class="fa fa-clock-o fa-5x"></i>
+                                <h3>148 </h3>
+                            </div>
+                            <div class="panel-footer back-footer-red">
+                                Hours Spent
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-brown">
+                            <div class="panel-body">
+                                <i class="fa fa fa-smile-o fa-5x"></i>
+                                <h3>Great</h3>
+                            </div>
+                            <div class="panel-footer back-footer-brown">
+                                Confidence Level
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row"> 
+               <div class="col-md-6 col-sm-12 col-xs-12">                     
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Quiz Scores
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-bar-chart"></div>
+                        </div>
+                    </div>            
+                </div>
+                      <div class="col-md-6 col-sm-12 col-xs-12">                     
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Current Sets
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                        </div>
+                    </div>            
+                </div> 
+                
+           </div>
+                <!-- /. ROW  -->
+
+                
+                  
+                <!-- /. ROW  -->
+				
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="postboardAssets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="postboardAssets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="postboardAssets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="postboardAssets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="postboardAssets/js/morris/morris.js"></script>
+    <!-- Custom Js -->
+    <script src="postboardAssets/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>
