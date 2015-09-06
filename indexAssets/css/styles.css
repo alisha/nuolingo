@@ -438,6 +438,7 @@ pre code {
 .contact .author-message {
   position: relative;
   margin-bottom: 60px;
+
 }
 .contact .author-message .profile {
   position: absolute;
@@ -445,6 +446,9 @@ pre code {
   top: 15px;
   width: 100px;
   height: 100px;
+
+
+}
 }
 .contact .author-message .profile img {
   -webkit-border-radius: 50%;
@@ -476,6 +480,7 @@ pre code {
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 30px;
+  font-weight:400;
 }
 .contact .author-message .speech-bubble a {
   color: #fff;
@@ -491,6 +496,7 @@ pre code {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-right: 10px solid #10b2e7;
+ 
 }
 .contact .author-message .speech-bubble .source {
   margin-top: 30px;
